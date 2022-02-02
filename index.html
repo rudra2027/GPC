@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
+
+    <title>GAMEPLAYCOACH</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
+
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <!-- Custom Browsers Color End -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <!-- Style CSS -->
+
+    <!-- Owl CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <style>
+        .checked {
+            color: orange;
+            /* Center website */
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        
+        .overlay {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: #1f2641;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+        
+        .advisor__img:hover .overlay {
+            bottom: 0;
+            height: 100%;
+        }
+        
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        #moreText {
+            /* Display nothing for the element */
+            display: none;
+        }
+        
+        @media screen and (max-width: 1200px) {
+            .advisor__img img {
+                border-bottom-left-radius: 50%;
+                border-top-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+                border-top-right-radius: 50%
+            }
+            .advisor__text ul {
+                justify-content: center;
+            }
+        }
+    </style>
+    <!-- Load google font==================================================-->
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: {
+                families: ['Catamaran:300,400,600,700', 'Raleway:100,700', 'Roboto:700,900']
+            }
+        }
+
+        ;
+        (function() {
+                var wf = document.createElement('script');
+                wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+                wf.type = 'text/javascript';
+                wf.async = 'true';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wf, s);
+            }
+
+        )();
+    </script>
+    <!-- Load other scripts==================================================-->
+    <script type="text/javascript">
+        var _html = document.documentElement;
+        _html.className = _html.className.replace("no-js", "js");
+    </script>
+    <style>
+        .preloader {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: #fff;
+            z-index: 9999;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="preloader"></div>
+
+    <div class="wrapper">
+
+        <header class="header">
+            <a href="#" class="logo">
+                <div class="logo__img"></div>
+                <div class="logo__title">GAMEPLAYCOACH</div>
+            </a>
+
+            <ul class="menu">
+
+                <li class="menu__item">
+                    <a href="index.html" class="menu__link">HOME</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#about" class="menu__link">ABOUT</a>
+                </li>
+
+                <li class="menu__item">
+                    <a href="#advisors" class="menu__link">COACHES</a>
+                </li>
+
+                <li class="menu__item">
+                    <a href="#team" class="menu__link">GAMES</a>
+                </li>
+
+            </ul>
+
+            <div class="header__right">
+                <select class="select">
+					<option value="ru">ru</option>
+					<option value="ua">ua</option>
+					<option value="en">en</option>
+				</select>
+                <div class="sign-in-wrap">
+                    <a href="Register.html" class="btn-sign-in">Sign in</a>
+                </div>
+
+            </div>
+
+            <div class="btn-menu">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+        </header>
+
+        <div class="fixed-menu">
+            <div class="fixed-menu__header">
+                <a href="#" class="logo">
+                    <div class="logo__img"></div>
+                    <div class="logo__title">GamePlayCoach</div>
+                </a>
+
+                <div class="btn-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 47.971 47.971" style="enable-background:new 0 0 47.971 47.971;" xml:space="preserve" width="512px" height="512px">
+							<path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88   c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242   C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879   s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z" fill="#006DF0"/></svg>
+                </div>
+            </div>
+
+            <div class="fixed-menu__content">
+
+                <ul class="mob-menu">
+                    <li class="mob-menu__item">
+                        <a href="index.html" class="menu__link">HOME</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a href="#about" class="menu__link">ABOUT</a>
+                    </li>
+
+                    <li class="mob-menu__item">
+                        <a href="#advisors" class="menu__link">COACHES</a>
+                    </li>
+
+                    <li class="mob-menu__item">
+                        <a href="#team" class="menu__link">GAMES</a>
+                    </li>
+                </ul>
+
+                <select class="select">
+					<option value="ru">ru</option>
+					<option value="ua">ua</option>
+					<option value="en">en</option>
+				</select>
+
+                <div class="btn-wrap">
+                    <a href="Register.html" class="btn-sign-in">Sign in</a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <section class="promo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 promo__content" data-aos="fade-right">
+
+                        <h1>GPC Just Entered <span>the Real World</span></h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus fugiat eveniet perspiciatis nesciunt voluptatibus nemo obcaecati hic magnam animi. Blanditiis cum nam voluptatum at consequatur cumque alias molestias similique laudantium. </p>
+
+
+                        <div class="promo__btns-wrap">
+                            <a href="" class="btn btn--medium btn--orange"><span>Trainings</span></a>
+                            <a href="#advisors" class="btn btn--big btn--blue">Coaches</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <img src="img/promo-bg.png" data-aos="fade-up" alt="" class="promo__img">
+
+            </div>
+            <div class="scroll-down">
+                <img src="img/scroll-down.png" alt="">
+            </div>
+        </section>
+
+
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="row">
+                    <div data-aos="fade-right" class="col-lg-5">
+                        <div class="section-header section-header--animated section-header--tire section-header--small-margin">
+                            <h4>About ICO</h4>
+                            <h2>Cryptoland Theme <span>is the best for your ICO</span>
+                            </h2>
+                        </div>
+                        <div class="about__animated-content">
+                            <p>
+                                Spend real fights effective anything extra by leading. Mouthwatering leading how real formula also locked-in have can mountain thought. Jumbo plus shine sale.
+                            </p>
+                            <ul>
+                                <li>
+                                    Mouthwatering leading how real formula also
+                                </li>
+                                <li>Locked-in have can mountain thought</li>
+                                <li>Locked-in have can mountain thought</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 align-items-center">
+                        <img src="img/about-img.png" class="about__img img-responsive" alt="">
+                    </div>
+                </div>
+            </div>
+            <img src="img/about-bg.png" data-jarallax-element="40" alt="" class="about__bg">
+        </section>
+
+        <section class="section section--no-pad-bot services" id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="section-header section-header--animated section-header--center section-header--medium-margin">
+                            <h4>FEATURES</h4>
+                            <h2>GAMER? BINGO! YOU GOT GPC</h2>
+                        </div>
+
+                        <div class="services__items">
+                            <div class="services__left">
+                                <div data-aos="fade-up" class="service">
+                                    <div class="service__bg" style="background-color: #e85f70; box-shadow: 0 0 51px rgba(232, 95, 112, 0.74); box-shadow: 0 0 51px rgba(232, 95, 112, 0.74);"></div>
+                                    <img src="img/service-icon-1.svg" alt="">
+                                    <div class="service__title">
+                                        Online Coaches
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="200" class="service">
+                                    <div class="service__bg" style="background-color: #fa8936; background-image: linear-gradient(-234deg, #ea9d64 0%, #fa8936 100%); box-shadow: 0 0 51px rgba(250, 137, 54, 0.74);"></div>
+                                    <img src="img/service-icon-2.svg" alt="">
+                                    <div class="service__title">
+                                        Earning+Gaming
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="services__right">
+                                <div data-aos="fade-up" data-aos-delay="400" class="service">
+                                    <div class="service__bg" style="background-image: linear-gradient(-234deg, #6ae472 0%, #4bc253 100%); box-shadow: 0 0 51px rgba(75, 194, 83, 0.74);"></div>
+                                    <img src="img/service-icon-3.svg" alt="">
+                                    <div class="service__title">
+                                        Competitions
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="600" class="service">
+                                    <div class="service__bg" style="background-color: #0090d5; background-image: linear-gradient(-234deg, #29aceb 0%, #0090d5 100%); box-shadow: 0 0 51px rgba(0, 144, 213, 0.74);"></div>
+                                    <img src="img/service-icon-4.svg" alt="">
+                                    <div class="service__title">
+                                        Fame
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="img/services-bg1.png" alt="" class="services__bg">
+            <img src="img/services-bg-1.png" class="services__cosmos" alt="">
+        </section>
+        <br>
+        <br>
+        <section class="advisors" id="advisors">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="section-header section-header--animated section-header--center section-header--big-margin">
+                            <h2> Our Coaches</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div data-aos="fade-right" class="col-md-5">
+                        <div class="advisor">
+                            <a href="" class="advisor__img">
+                                <img src="img/1.jpg" alt="" style="border-bottom-left-radius: 50%;border-top-left-radius: 50%;" class="image">
+
+                                <div class="overlay">
+                                    <div class="text"></div>
+                                </div>
+
+                            </a>
+                            <div class="advisor__content" style="align-items: center;
+                            margin-top: 20px;
+                            ">
+                                <div class="advisor__title">
+                                    David Drake
+                                </div>
+                                <div class="advisor__post">
+                                    <p>Rs.100/hr<small><del style="color: orangered;">Rs.200/hr</del></small></p>
+                                </div>
+                                <p class="advisor__text">
+                                    <ul class="d-flex fa-pull-left" style="justify-content: center;">
+                                        <li><span class="fa fa-star checked"></span></li>
+                                        <li><span class="fa fa-star checked"></span></li>
+                                        <li><span class="fa fa-star checked"></span></li>
+                                        <li><span class="fa fa-star"></span></li>
+                                        <li> <span class="fa fa-star"></span> </li>
+
+                                    </ul>
+
+                                    <div class="advisor__text" style="width: 155px;">
+                                        <div class="promo__btns-wrap">
+                                            <a href="" class="btn btn--medium btn--orange" style=" margin-bottom: 6px;
+                                        width: 159px;
+                                        height: 48px; 
+                                      "><span>Book</span></a>
+                                            <a href="#advisors" class="btn btn--big btn--blue" style="  margin-bottom: 6px;
+                                        width: 159px;
+                                        height: 48px;
+                                        padding: 0px 46px;
+                                      ">Details</a>
+
+
+                                        </div>
+                                    </div>
+
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div data-aos="fade-left" data-aos-delay="200" class="col-md-6">
+                        <div class="advisor">
+                            <a href="" class="advisor__img">
+                                <img src="img/1.jpg" alt="" style="border-bottom-left-radius: 50%;border-top-left-radius: 50%;" class="image">
+
+                                <div class="overlay">
+                                    <div class="text"></div>
+                                </div>
+
+                            </a>
+                            <div class="advisor__content" style="align-items: center;
+                            margin-top: 20px;
+                            ">
+                                <div class="advisor__title">
+                                    Ann Balock
+                                </div>
+                                <div class="advisor__post">
+                                    <p>Rs.100/hr<small><del style="color: orangered;">Rs.200/hr</del></small></p>
+                                </div>
+                                <p class="advisor__text">
+
+                                    <ul class="d-flex fa-pull-left" style="justify-content: center;">
+                                        <li><span class="fa fa-star checked"></span></li>
+                                        <li><span class="fa fa-star checked"></span></li>
+                                        <li><span class="fa fa-star checked"></span></li>
+                                        <li><span class="fa fa-star"></span></li>
+                                        <li> <span class="fa fa-star"></span> </li>
+
+                                    </ul>
+                                    <div class="advisor__text" style="width: 155px;">
+                                        <div class="promo__btns-wrap">
+                                            <a href="" class="btn btn--medium btn--orange" style=" margin-bottom: 6px;
+                                        width: 159px;
+                                        height: 48px; 
+                                      "><span>Book</span></a>
+                                            <a href="#advisors" class="btn btn--big btn--blue" style="  margin-bottom: 6px;
+                                        width: 159px;
+                                        height: 48px;
+                                        padding: 0px 46px;
+                                      ">Details</a>
+
+
+                                        </div>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div data-aos="fade-right" class="col-md-5">
+                        <div class="advisor">
+                            <a href="" class="advisor__img">
+                                <img src="img/1.jpg" alt="" style="border-bottom-left-radius: 50%;border-top-left-radius: 50%;" class="image">
+
+                                <div class="overlay">
+                                    <div class="text"></div>
+                                </div>
+                            </a>
+                            <div class="advisor__content" style="align-items: center;
+                            margin-top: 20px;
+                            ">
+                                <div class="advisor__title">
+                                    Vladimir Nikitin
+                                </div>
+                                <div class="advisor__post">
+                                    <p>Rs.100/hr<small><del style="color: orangered;">Rs.200/hr</del></small></p>
+                                </div>
+                                <p class="advisor__text">
+                                    <ul class="d-flex fa-pull-left" style="justify-content: center;">
+                                        <li><span class="fa fa-star checked"></span></li>
+                                        <li><span class="fa fa-star checked"></span></li>
+                                        <li><span class="fa fa-star checked"></span></li>
+                                        <li><span class="fa fa-star"></span></li>
+                                        <li> <span class="fa fa-star"></span> </li>
+                                    </ul>
+
+                                    <div class="advisor__text" style="width: 155px;">
+                                        <div class="promo__btns-wrap">
+                                            <a href="" class="btn btn--medium btn--orange" style=" margin-bottom: 6px;
+                                        width: 159px;
+                                        height: 48px; 
+                                      "><span>Book</span></a>
+                                            <a href="#advisors" class="btn btn--big btn--blue" style="  margin-bottom: 6px;
+                                        width: 159px;
+                                        height: 48px;
+                                        padding: 0px 46px;
+                                      ">Details</a>
+
+
+                                        </div>
+                                    </div>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div data-aos="fade-left" data-aos-delay="200" class="col-md-6">
+                        <div class="advisor">
+                            <a href="" class="advisor__img">
+                                <img src="img/1.jpg" alt="" style="border-bottom-left-radius: 50%;border-top-left-radius: 50%;" class="image">
+
+                                <div class="overlay">
+                                    <div class="text"></div>
+                                </div>
+
+                            </a>
+
+                            <div class="advisor__content" style="align-items: center;
+                            margin-top: 20px;
+                            ">
+                                <div class="advisor__title">
+                                    Sam Peters
+                                </div>
+                                <div class="advisor__post">
+                                    <p>Rs.100/hr<small><del style="color: orangered;">Rs.200/hr</del></small></p>
+                                </div>
+                                <p class="advisor__text">
+                                    <ul class="d-flex fa-pull-left" style="justify-content: center;">
+                                        <li><span class="fa fa-star checked"></span></li>
+                                        <li><span class="fa fa-star checked"></span></li>
+                                        <li><span class="fa fa-star checked"></span></li>
+                                        <li><span class="fa fa-star"></span></li>
+                                        <li> <span class="fa fa-star"></span> </li>
+                                    </ul>
+                                    <div class="advisor__text" style="width: 155px;">
+                                        <div class="promo__btns-wrap">
+                                            <a href="" class="btn btn--medium btn--orange" style=" margin-bottom: 6px;
+                                        width: 159px;
+                                        height: 48px; 
+                                      "><span>Book</span></a>
+                                            <a href="#advisors" class="btn btn--big btn--blue" style="  margin-bottom: 6px;
+                                        width: 159px;
+                                        height: 48px;
+                                        padding: 0px 46px;
+                                      ">Details</a>
+
+
+                                        </div>
+                                    </div>
+
+
+
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="points">
+                    </div>
+                    <div id="moreText">
+                        <div data-aos="fade-right" class="col-md-5">
+                            <div class="advisor">
+                                <a href="" class="advisor__img">
+                                    <img src="img/1.jpg" alt="" style="border-bottom-left-radius: 50%;border-top-left-radius: 50%;" class="image">
+
+                                    <div class="overlay">
+                                        <div class="text"></div>
+                                    </div>
+                                </a>
+                                <div class="advisor__content" style="align-items: center;
+                                margin-top: 20px;
+                                ">
+                                    <div class="advisor__title">
+                                        Vladimir Nikitin
+                                    </div>
+                                    <div class="advisor__post">
+                                        <p>Rs.100/hr<small><del style="color: orangered;">Rs.200/hr</del></small></p>
+                                    </div>
+                                    <p class="advisor__text">
+                                        <ul class="d-flex fa-pull-left" style="justify-content: center;">
+                                            <li><span class="fa fa-star checked"></span></li>
+                                            <li><span class="fa fa-star checked"></span></li>
+                                            <li><span class="fa fa-star checked"></span></li>
+                                            <li><span class="fa fa-star"></span></li>
+                                            <li> <span class="fa fa-star"></span> </li>
+                                        </ul>
+
+                                        <div class="advisor__text" style="width: 155px;">
+                                            <div class="promo__btns-wrap">
+                                                <a href="" class="btn btn--medium btn--orange" style=" margin-bottom: 6px;
+                                            width: 159px;
+                                            height: 48px; 
+                                          "><span>Book</span></a>
+                                                <a href="#advisors" class="btn btn--big btn--blue" style="  margin-bottom: 6px;
+                                            width: 159px;
+                                            height: 48px;
+                                            padding: 0px 46px;
+                                          ">Details</a>
+
+
+                                            </div>
+                                        </div>
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-left" data-aos-delay="200" class="col-md-6">
+                            <div class="advisor">
+                                <a href="" class="advisor__img">
+                                    <img src="img/1.jpg" alt="" style="border-bottom-left-radius: 50%;border-top-left-radius: 50%;" class="image">
+
+                                    <div class="overlay">
+                                        <div class="text"></div>
+                                    </div>
+
+                                </a>
+
+                                <div class="advisor__content" style="align-items: center;
+                                margin-top: 20px;
+                                ">
+                                    <div class="advisor__title">
+                                        Sam Peters
+                                    </div>
+                                    <div class="advisor__post">
+                                        <p>Rs.100/hr<small><del style="color: orangered;">Rs.200/hr</del></small></p>
+                                    </div>
+                                    <p class="advisor__text">
+                                        <ul class="d-flex fa-pull-left" style="justify-content: center;">
+                                            <li><span class="fa fa-star checked"></span></li>
+                                            <li><span class="fa fa-star checked"></span></li>
+                                            <li><span class="fa fa-star checked"></span></li>
+                                            <li><span class="fa fa-star"></span></li>
+                                            <li> <span class="fa fa-star"></span> </li>
+                                        </ul>
+                                        <div class="advisor__text" style="width: 155px;">
+                                            <div class="promo__btns-wrap">
+                                                <a href="" class="btn btn--medium btn--orange" style=" margin-bottom: 6px;
+                                            width: 159px;
+                                            height: 48px; 
+                                          "><span>Book</span></a>
+                                                <a href="#advisors" class="btn btn--big btn--blue" style="  margin-bottom: 6px;
+                                            width: 159px;
+                                            height: 48px;
+                                            padding: 0px 46px;
+                                          ">Details</a>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="advisor" style=" position: absolute;
+            bottom: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            cursor: pointer">
+                <img src="img/scroll-down.png" alt="" onclick="toggleText()" id="textButton">
+            </div>
+        </section>
+
+
+
+        <section class="data token-data section section--no-pad-bot">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="section-header section-header--animated section-header--medium-margin section-header--center">
+                            <h4>Our data</h4>
+                            <h2>Token Distribution</h2>
+                            <div class="bg-title">
+                                Token Distribution
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row chart__row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="chart">
+                            <img class="chart__bg" src="img/chart-bg.png" alt="">
+                            <div class="chart__wrap">
+                                <canvas id="myChart" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" class="col-lg-6 token-data__animated-content">
+                        <div class="chart__title">
+                            Allocation of funds
+                        </div>
+                        <p class="chart__text">
+                            Total token supply - 152,358
+                        </p>
+                        <ul class="chart__legend">
+                            <li>
+                                <span style="width: 101px;"></span> 9% Founders and Team
+                            </li>
+                            <li>
+                                <span style="width: 153px;"></span> 13% Reserved Funding
+                            </li>
+                            <li>
+                                <span style="width: 34px;"></span> 2% Advisors
+                            </li>
+                            <li>
+                                <span style="width: 289px;"></span> 25% Distribute to Community
+                            </li>
+                            <li>
+                                <span style="width: 22px;"></span> 1% Bounty campaign
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section cases">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="section-header section-header--animated section-header--center section-header--medium-margin">
+                            <h4>Some facts</h4>
+                            <h2>Use Cases</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col cases__list">
+                        <div data-aos="fade-right" class="cases__item">
+                            <img src="img/cases-icon-1.png" alt="" class="cases__item-icon">
+                            <div class="cases__item-content">
+                                <div class="cases__item-title">
+                                    Cryptoland App
+                                </div>
+                                <p class="cases__item-text">
+                                    Asiatic glassfish pilchard sandburrower, orangestriped triggerfish hamlet Molly Miller trunkfish spiny dogfish! Jewel tetra frigate mackerel
+                                </p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-left" data-aos-delay="200" class="cases__item">
+                            <img src="img/cases-icon-2.png" alt="" class="cases__item-icon">
+                            <div class="cases__item-content">
+                                <div class="cases__item-title">
+                                    Mining Service
+                                </div>
+                                <p class="cases__item-text">
+                                    Spend real fights effective anything extra by leading. Mouthwatering leading how real formula also locked-in have can mountain thought. Jumbo
+                                </p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-right" class="cases__item">
+                            <img src="img/cases-icon-3.png" alt="" class="cases__item-icon">
+                            <div class="cases__item-content">
+                                <div class="cases__item-title">
+                                    Blockchain
+                                </div>
+                                <p class="cases__item-text">
+                                    Clownfish catfish antenna codlet alfonsino squirrelfish deepwater flathead sea lamprey. Bombay duck sand goby snake mudhead
+                                </p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-left" data-aos-delay="200" class="cases__item">
+                            <img src="img/cases-icon-4.png" alt="" class="cases__item-icon">
+                            <div class="cases__item-content">
+                                <div class="cases__item-title">
+                                    Exchange
+                                </div>
+                                <p class="cases__item-text">
+                                    Barbelless catfish pelican gulper candlefish thornfishGulf menhaden ribbonbearer riffle dace black dragonfish denticle herring
+                                </p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-right" class="cases__item">
+                            <img src="img/cases-icon-5.png" alt="" class="cases__item-icon">
+                            <div class="cases__item-content">
+                                <div class="cases__item-title">
+                                    Cryptoland
+                                </div>
+                                <p class="cases__item-text">
+                                    Clownfish catfish antenna codlet alfonsino squirrelfish deepwater flathead sea lamprey. Bombay duck sand goby snake mudhead
+                                </p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-left" data-aos-delay="200" class="cases__item">
+                            <img src="img/cases-icon-6.png" alt="" class="cases__item-icon">
+                            <div class="cases__item-content">
+                                <div class="cases__item-title">
+                                    Cryptoland App
+                                </div>
+                                <p class="cases__item-text">
+                                    Asiatic glassfish pilchard sandburrower, orangestriped triggerfish hamlet Molly Miller trunkfish spiny dogfish!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <img src="img/cases-bg.png" class="cases__bg" alt="">
+            <img src="img/cases-imgs.png" class="cases__elements" alt="">
+        </section>
+
+        <section class="data" id="stat">
+            <div class="container data__container">
+                <div class="row">
+                    <div class="col">
+                        <img src="img/data-bg.png" class="data__img" alt="">
+                        <div class="counter__item counter__item-1">
+                            <div class="counter__item-title">Current Users</div>
+                            <div class="counter counter__item-value counter__item-value--blue numscroller">600</div>
+                        </div>
+                        <div class="counter__item counter__item-2">
+                            <div class="counter__item-title">Total Coaches</div>
+                            <div class="counter counter__item-value counter__item-value--pink">7</div>
+                        </div>
+                        <div class="counter__item counter__item-3">
+                            <div class="counter__item-title">Competitions Held</div>
+                            <div class="counter counter__item-value counter__item-value counter__item-value--purpure">10</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="img/data-bg-space.png" class="data__bg" alt="">
+        </section>
+
+        <section class="section section--no-pad-bot facts">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="section-header section-header--animated section-header--center section-header--small-margin">
+                            <h4>Some facts</h4>
+                            <h2>Smart Contract API</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="facts__line">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="facts__line-list">
+                                <div class="facts__item">
+                                    <img src="img/bitcon-round.png" class="facts__icon" alt="">
+                                    <div class="facts__title">
+                                        Bitcoin + RSK
+                                    </div>
+                                </div>
+                                <div class="facts__item">
+                                    <img src="img/stellar-round.png" class="facts__icon" alt="">
+                                    <div class="facts__title">
+                                        Stellar Lumens
+                                    </div>
+                                </div>
+                                <div class="facts__item">
+                                    <img src="img/counterparty-round.png" class="facts__icon" alt="">
+                                    <div class="facts__title">
+                                        Counterparty
+                                    </div>
+                                </div>
+                                <div class="facts__item">
+                                    <img src="img/lisk.png" class="facts__icon" alt="">
+                                    <div class="facts__title">
+                                        Lisk
+                                    </div>
+                                </div>
+                                <div class="facts__item">
+                                    <img src="img/eos-round.png" class="facts__icon" alt="">
+                                    <div class="facts__title">
+                                        EOS
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/facts-bg.png" class="facts__bg" alt="">
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+        <section class="section faq" id="faq">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="section-header section-header--center section-header--medium-margin">
+                            <h4>FAQ</h4>
+                            <h2>Frequency Asked Questions</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+
+                        <ul class="accordion">
+                            <li>
+                                <a>Can American citizens take part in the crowdsale?</a>
+                                <p>
+                                    JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript
+                                    for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation.
+                                </p>
+                            </li>
+                            <li>
+                                <a>Does the crowdsale comply with legal regulations?</a>
+                                <p>
+                                    JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript
+                                    for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation.
+                                </p>
+                            </li>
+                            <li>
+                                <a>Can I trade SCR at an exchange?</a>
+                                <p>
+                                    JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript
+                                    for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation.
+                                </p>
+                            </li>
+                            <li>
+                                <a>What is the difference between Coin tokens and Power tokens?</a>
+                                <p>
+                                    JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript
+                                    for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation.
+                                </p>
+                            </li>
+                            <li>
+                                <a>Why is Cryptonet economic model sustainable?</a>
+                                <p>
+                                    JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript
+                                    for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation.
+                                </p>
+                            </li>
+                            <li>
+                                <a>Can I mine SCR?</a>
+                                <p>
+                                    JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript
+                                    for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation.
+                                </p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section class="section contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="section-header section-header--center section-header--medium-margin">
+                            <h4>Contact us</h4>
+                            <h2>Get in Touch</h2>
+                        </div>
+                        <form action="#" class="form contact-form" id="contact-form">
+                            <input type="text" name="Name" class="form__input" placeholder="Name">
+                            <input type="email" name="Email" class="form__input" placeholder="Email">
+                            <textarea name="Message" class="form__textarea" placeholder="Message"></textarea>
+                            <button class="form__btn btn btn--uppercase btn--orange"><span>Send message</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <img src="img/subscribe-bg.png" class="contact-bg" alt="">
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <a href="" class="logo">
+                            <img class="logo__img logo__img--big" src="img/Logo_white.svg" alt="">
+                            <div class="logo__title">GAMEPLAYCOACH</div>
+                        </a>
+                        <div class="copyright">© 2022, GAMEPLAYCOACH</div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="social-block">
+                            <div class="social-block__title">
+                                Stay connected:
+                            </div>
+
+                            <ul class="social-list">
+                                <li class="social-list__item">
+
+                                    <a href="" class="social-list__link">
+                                        <i class="fontello-icon icon-twitter">&#xf309;</i>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="" class="social-list__link">
+                                        <i class="fontello-icon icon-facebook">&#xf30c;</i>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="" class="social-list__link">
+                                        <i class="fontello-icon icon-telegram">&#xf2c6;</i>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="" class="social-list__link">
+                                        <i class="fontello-icon icon-bitcoin">&#xf15a;</i>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="" class="social-list__link">
+                                        <i class="fontello-icon icon-youtube-play">&#xf16a;</i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+    </footer>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')
+    </script>
+
+    <script src="js/scripts.min.js"></script>
+
+    <script>
+        function toggleText() {
+
+            // Get all the elements from the page
+            var points =
+                document.getElementById("points");
+
+            var showMoreText =
+                document.getElementById("moreText");
+
+            var buttonText =
+                document.getElementById("textButton");
+
+            // If the display property of the dots 
+            // to be displayed is already set to 
+            // 'none' (that is hidden) then this 
+            // section of code triggers
+            if (points.style.display === "none") {
+
+                // Hide the text between the span
+                // elements
+                showMoreText.style.display = "none";
+
+                // Show the dots after the text
+                points.style.display = "contents";
+
+                // Change the text on button to 
+                // 'Show More'
+                buttonText.innerHTML = "Show More";
+            }
+
+            // If the hidden portion is revealed,
+            // we will change it back to be hidden
+            else {
+
+                // Show the text between the
+                // span elements
+                showMoreText.style.display = "contents";
+
+                // Hide the dots after the text
+                points.style.display = "none";
+
+                // Change the text on button
+                // to 'Show Less'
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+    </script>
+</body>
+
+</html> // span elements showMoreText.style.display = "contents"; // Hide the dots after the text points.style.display = "none"; // Change the text on button // to 'Show Less' buttonText.innerHTML = "Show Less"; } }
+</script>
+</body>
+
+</html>
